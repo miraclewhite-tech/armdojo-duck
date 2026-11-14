@@ -7,7 +7,7 @@ Set up all 15 servos on the bench, one at a time, before any of them goes into a
 - 15 × Feetech HD-1910-C001 servos, each with its 2.0 mm 3-pin lead ([duck set](https://armdojo.com/products/feetech-hd-1910-c001-coreless-servo-microduck?variant=50899680592111&utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck))
 - A [Feetech FE-URT-2](https://armdojo.com/products/feetech-fe-urt-2-usb-ttl-rs485-servo-debug-board?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) USB debug board and the USB-A to USB-C data cable from its box. Charge-only USB-C cables will not connect.
 - An [adjustable 3–12 V 5 A power supply](https://armdojo.com/products/servo-power-adapter-7-4v-8-4v-3a-dc-5-5x2-1?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) with its DC jack lead
-- A Windows computer for Feetech FD. On Linux and macOS the board works as a serial port for the Feetech SCServo SDK.
+- A computer with Chrome or Edge for the free [ArmDojo Servo ID Tool](https://armdojo.com/pages/servo-id-tool?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck), or a Windows computer for Feetech FD. On Linux and macOS the board also works as a serial port for the Feetech SCServo SDK.
 - A marker to label the servos
 
 ## 1. Set the voltage first
@@ -33,7 +33,11 @@ USB alone powers the servo port while you set IDs. Switch on the external supply
 
 On Windows the driver installs by itself. The board appears in Device Manager → Ports as **USB-Enhanced-SERIAL CH343 (COMx)**; note the COM number.
 
-## 4. Give each servo its ID in Feetech FD
+## 4. Give each servo its ID
+
+**In the browser (any computer):** open the free [ArmDojo Servo ID Tool](https://armdojo.com/pages/servo-id-tool?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) in Chrome or Edge and press *Connect URT-2*. Set *Start at ID* 10 and *Last ID* 14, press *Start numbering* and plug in one servo at a time: each one gets the next ID, is set to 1 Mbps and is read back. Then do 20–24 and 30–34. Keep the 7.3 V supply connected. The tool shows the HD-1910 by its model number.
+
+**In Feetech FD (Windows):**
 
 1. Select the CH343 COM port, set the baud rate to **1000000** and click **Open**.
 2. Click **Search**. When the servo appears, click **Stop**, then click the servo. A new servo shows ID 1.

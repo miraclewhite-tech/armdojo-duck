@@ -10,6 +10,8 @@ Build notes and a parts list for a **Microduck-style biped duck robot on 15 Feet
 
 **💬 Questions, build help and show-and-tell: [join our Discord](https://discord.gg/MdyRuJVFAm).**
 
+**🔢 All 15 servos come as ID 1. Number them in your browser with the FE-URT-2, nothing to install: [free ArmDojo Servo ID Tool](https://armdojo.com/pages/servo-id-tool?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) ([source](https://github.com/armdojo/servo-id-tool)).**
+
 ## At a glance
 
 - **Servos:** 15 × Feetech HD-1910-C001: five per leg, four in the neck and head, one for the beak. Each servo ships with its own 2.0 mm 3-pin lead.
@@ -49,6 +51,8 @@ Every HD-1910 leaves the factory as ID 1 at 1,000,000 baud, so give each servo i
 2. Wire the supply to the FE-URT-2: red to **V1**, black to **G**. The G / V2 pair is for RS485 servos and stays empty.
 3. Plug in **one** servo, connect the board over USB, and give the servo its joint ID (10–14, 20–24, 30–34).
 4. Centre the servo, write the ID on it, then do the next one.
+
+**Fastest way:** the free [ArmDojo Servo ID Tool](https://armdojo.com/pages/servo-id-tool?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) does step 3 from Chrome or Edge on any computer. Set *Start at ID* 10 and *Last ID* 14 for the right leg, press *Start numbering* and plug in one servo at a time; then do 20–24 and 30–34. The tool shows the HD-1910 by its model number.
 
 The step-by-step version, with the Feetech FD screens and an ID map, is in [`docs/servo-setup.md`](docs/servo-setup.md).
 
