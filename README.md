@@ -15,7 +15,7 @@ Build notes and a parts list for a **Microduck-style biped duck robot on 15 Feet
 ## At a glance
 
 - **Servos:** 15 × Feetech HD-1910-C001: five per leg, four in the neck and head, one for the beak. Each servo ships with its own 2.0 mm 3-pin lead.
-- **Servo IDs:** 10–14, 20–24 and 30–34. In microduck-replica, 10–14 is the right leg, 20–24 the left leg and 30–34 the neck, head and beak.
+- **Servo IDs:** 10–14, 20–24 and 30–34. In microduck-replica, 10–14 is the right leg, 20–24 the left leg and 30–34 the neck, head and beak. XGO-Duck uses the same IDs with the legs swapped: 10–14 left, 20–24 right.
 - **Power:** a 2S pack. It reads 8.4 V when full, the top of the HD-1910's 4–8.4 V range, so never use a 3S pack.
 - **Setup voltage:** 7.3 V from an adjustable supply while you set the IDs.
 - **Bearings:** 11 × 16 × 22 × 4 mm, plus 3 × 10 × 15 × 3 mm for microduck-replica or 2 for XGO-Duck.
@@ -52,7 +52,7 @@ Every HD-1910 leaves the factory as ID 1 at 1,000,000 baud, so give each servo i
 3. Plug in **one** servo, connect the board over USB, and give the servo its joint ID (10–14, 20–24, 30–34).
 4. Centre the servo, write the ID on it, then do the next one.
 
-**Fastest way:** the free [ArmDojo Servo ID Tool](https://armdojo.com/pages/servo-id-tool?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) does step 3 from Chrome or Edge on any computer. Set *Start at ID* 10 and *Last ID* 14 for the right leg, press *Start numbering* and plug in one servo at a time; then do 20–24 and 30–34. The tool shows the HD-1910 by its model number.
+**Fastest way:** the free [ArmDojo Servo ID Tool](https://armdojo.com/pages/servo-id-tool?utm_source=github&utm_medium=referral&utm_campaign=armdojo-duck) does step 3 from Chrome or Edge on any computer. Pick the *microduck-replica* or *XGO-Duck* preset, press *Start numbering* and plug in one servo at a time. The presets number all 15 servos, show the joint for each ID and switch on over-current and over-voltage protection. Pick the preset for your build: the two use the same IDs with the legs the other way round.
 
 The step-by-step version, with the Feetech FD screens and an ID map, is in [`docs/servo-setup.md`](docs/servo-setup.md).
 

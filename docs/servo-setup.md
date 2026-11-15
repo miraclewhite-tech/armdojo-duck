@@ -47,13 +47,13 @@ On Windows the driver installs by itself. The board appears in Device Manager �
 
 ### ID map
 
-| IDs | Joints in microduck-replica |
-|---|---|
-| 10–14 | Right leg |
-| 20–24 | Left leg |
-| 30–34 | Neck, head and beak |
+| IDs | microduck-replica | XGO-Duck |
+|---|---|---|
+| 10–14 | Right leg | **Left leg** |
+| 20–24 | Left leg | **Right leg** |
+| 30–34 | Neck, head and beak | 30–33 neck and head, 34 mouth |
 
-XGO-Duck uses the same three ID ranges. Check your build's joint list before you assemble.
+The two builds use the same IDs with the legs the other way round, so label the servos for the build you are making. The ArmDojo Servo ID Tool has a preset for each.
 
 ## 5. Centre, plan, test unmounted
 
